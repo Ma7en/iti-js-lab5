@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lab5 - Form</title>
+
+        <style>
+            .text-err,
+            .password-err,
+            .email-err,
+            .phone-err,
+            .gender-err {
+                display: none;
+            }
+
+            .username-msg,
+            .password-msg,
+            .email-msg,
+            .phone-msg,
+            .gender-msg {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="get" action="./server.html">
+            <!-- username -->
+            <div>
+                <label for="text">username</label>
+                <input type="text" id="text" />
+                <span class="text-err">Please enter a valid username</span>
+            </div>
+
+            <!-- password -->
+            <div>
+                <label for="password">password</label>
+                <input type="password" id="password" />
+                <span class="password-err">Please enter a valid password</span>
+            </div>
+
+            <!-- email -->
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" />
+                <span class="email-err">Please enter a valid email</span>
+            </div>
+
+            <!-- phone -->
+            <div>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" />
+                <span class="phone-err"
+                    >Please enter a valid Egyptian phone number</span
+                >
+            </div>
+
+            <!-- gender -->
+            <div>
+                <label for="male">male</label>
+                <input type="radio" name="gender" id="male" value="male" />
+                <label for="female">famele</label>
+                <input type="radio" name="gender" id="female" value="female" />
+                <span class="gender-err">Please select a gender</span>
+            </div>
+
+            <input type="submit" value="login" />
+        </form>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
